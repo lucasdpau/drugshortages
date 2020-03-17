@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/styles.css">  
+        <title>
+            Drug Shortage Checker
+        </title>
+    </head>
+
+    <body>
+        <form action="/search.html" method="post">
+            <input type="text" name="search_entry">
+            <button type="submit">Submit</button>
+        </form>
+        <div id="results">
+            <table>
+                {% for items in response_list %}
+                <tr>
+                    <td>
+                        {{ items }}
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div>
+            {% for items in response_j %}
+                {% if items != 'data' %}
+                    {{ items }}: {{response_j[items]}}
+                {% endif %}            
+            {% endfor %}
+        </div>
+        <div>
+            <a href="/">Home</a>
+        </div>
+    </body>
+    <footer>
+        2019
+    </footer>
+</html>

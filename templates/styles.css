@@ -1,0 +1,19 @@
+header {
+    background-color: tomato;
+    text-align: center;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#report {
+    background-color: darkgray;
+    text-align: center;
+}
+
+#txt {
+    width: 90%;
+}

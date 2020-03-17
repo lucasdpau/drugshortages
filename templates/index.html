@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/styles.css">  
+        <title>
+            Drug Shortage Checker
+        </title>
+    </head>
+
+    <body>
+        <header>
+            Drug Shortage Hub
+        </header>
+        We will keep track of a list of reports for each user. The app will check each report and inform the user
+        when there is an update to the shortage status.
+        <div>
+            <a href="search.html">Search Page</a>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <form action="/" method="post">
+                            <input type="text" name="report_entry" placeholder="Follow new report">
+                            <button type="submit">Submit</button>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="report">
+            <table class="index_table">
+                <tr>
+                        Summary of reports followed
+                </tr>
+                <td>
+                    Drug Name
+                </td>
+                <td>
+                    Time of report
+                </td>
+                <td>
+                    Shortage Status
+                </td>
+                <td>
+                    Report ID
+                </td>
+                {% for items in reports %}
+                <tr>
+                    {% for strings in items%}
+                    <td class="index_table">
+                        {{ strings }}
+                    </td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </body>
+    <footer>
+        2019
+    </footer>
+</html>
